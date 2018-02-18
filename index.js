@@ -29,6 +29,10 @@ function createIssue() {
 function showResults(json) {
 }
 
+var showForkRepo = (repo) => {
+  $("#results").append(`<h3>Forked Successfully!</h3><a href="${repo.html_url}"> ${repo.html_url}</a>`)
+}
+
 function forkRepo() {
   const repo = 'learn-co-curriculum/javascript-fetch-lab'
   //use fetch to fork it!
@@ -36,9 +40,9 @@ function forkRepo() {
     method: "post",
     headers: {
       Authorization: `${getToken()}`
-    }   
+    }
   }).then(res => res.json())
-    .then(json => showForkRepo(json))    
+    .then(json => showForkRepo(json))
 }
 
 }
