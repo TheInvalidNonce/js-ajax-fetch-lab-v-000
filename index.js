@@ -2,7 +2,7 @@ const baseURL = "https://api.github.com/"
 
 
 function getIssues() {
-  fetch(`${baseURL}`)
+  fetch(`${baseURL}repos/TheInvalidNonce/javascript-fetch-lab/issues`)
     .then(resp => resp.json())
     .then(json => json.map(issue => showIssues(issue)))
 }
@@ -16,7 +16,7 @@ function createIssue() {
   const text = $('body').value
   const issue = {title: title, body: text}
 
-  fetch(`${repo}`, {
+  fetch(`${baseURL}`, {
     method: 'post',
     headers: {
       Authorization: `${getToken()}`
