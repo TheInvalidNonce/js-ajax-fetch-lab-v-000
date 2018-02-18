@@ -13,7 +13,7 @@ function showIssues(issue) {
 
 function createIssue() {
   const title = document.getElementById('title').value
-  const text = $('body').value
+  const text = document.getElementById('body').value
   const issue = {title: title, body: text}
 
   fetch(`${baseURL}repos/TheInvalidNonce/javascript-fetch-lab/issues`, {
