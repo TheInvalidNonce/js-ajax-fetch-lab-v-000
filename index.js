@@ -2,7 +2,7 @@ const baseURL = "https://api.github.com/"
 
 
 function getIssues() {
-  fetch(`${repo}`)
+  fetch(`${baseURL}`)
     .then(resp => resp.json())
     .then(json => json.map(issue => showIssues(issue)))
 }
