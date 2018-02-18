@@ -16,7 +16,7 @@ function createIssue() {
   const text = $('body').value
   const issue = {title: title, body: text}
 
-  fetch(`${baseURL}`, {
+  fetch(`${baseURL}repos/TheInvalidNonce/javascript-fetch-lab/issues`, {
     method: 'post',
     headers: {
       Authorization: `${getToken()}`
