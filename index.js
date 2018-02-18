@@ -2,8 +2,6 @@ const baseURL = "https://api.github.com/"
 
 
 function getIssues() {
-  const repo = 'https://api.github.com/repos/TheInvalidNonce/javascript-fetch-lab/issues';
-
   fetch(`${repo}`)
     .then(resp => resp.json())
     .then(json => json.map(issue => showIssues(issue)))
