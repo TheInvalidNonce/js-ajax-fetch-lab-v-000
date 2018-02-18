@@ -1,3 +1,6 @@
+const baseURL = "https://api.github.com/"
+
+
 function getIssues() {
   const repo = 'https://api.github.com/repos/TheInvalidNonce/javascript-fetch-lab/issues';
 
