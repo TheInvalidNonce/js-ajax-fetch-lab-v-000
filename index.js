@@ -31,7 +31,7 @@ function showResults(json) {
 }
 
 var showForkRepo = (repo) => {
-  $("#results").append(`<h3>Forked Successful!</h3><a href="${repo.html_url}"> ${repo.html_url}</a>`)
+  $("#results").append(`<h3>Fork Successful!</h3><a href="${repo.html_url}"> ${repo.html_url}</a>`)
 }
 
 function forkRepo() {
